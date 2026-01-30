@@ -26,7 +26,7 @@ No modules.
 |------|------|
 | [aws_s3_bucket.hcpt_gitops_bucket](https://registry.terraform.io/providers/hashicorp/aws/6.28.0/docs/resources/s3_bucket) | resource |
 | [aws_s3_object.example_files](https://registry.terraform.io/providers/hashicorp/aws/6.28.0/docs/resources/s3_object) | resource |
-| [random_pet.s3_bucket_suffix](https://registry.terraform.io/providers/hashicorp/random/3.8.0/docs/resources/pet) | resource |
+| [random_string.s3_bucket_suffix](https://registry.terraform.io/providers/hashicorp/random/3.8.0/docs/resources/string) | resource |
 
 ## Inputs
 

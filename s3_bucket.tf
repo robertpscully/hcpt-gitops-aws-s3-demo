@@ -1,14 +1,18 @@
 
 resource "aws_s3_bucket" "hcpt_gitops_bucket" {
 
-  bucket = "${var.bucket_prefix}-hcpt-gitops-example-bucket-${random_pet.s3_bucket_suffix.id}"
+  bucket = "${var.bucket_prefix}-hcpt-gitops-example-bucket-${random_string.s3_bucket_suffix.id}"
 }
 
-resource "random_pet" "s3_bucket_suffix" {
+resource "random_string" "s3_bucket_suffix" {
   keepers = {
     "version" : "v1"
   }
-  length = 3
+  length = 6
+  upper  = false
+  lower  = true
+  numeric = true
+  special = false
 }
 
 resource "aws_s3_object" "example_files" {
